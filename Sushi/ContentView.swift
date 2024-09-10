@@ -9,13 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        SushiView(menuItem: .init(id: "2", image: "/upload/iblock/368/zx0dxzelbg3vxohbdmuorr107kt3tna6.jpg", name: "Label", content: "sublabel", price: "100", weight: "50 г", spicy: "Y")) {
+            
         }
-        .padding()
+            .onAppear {
+                print("Test")
+                let task = URLSession.shared.dataTask(with: .init(url: .init(string: "https://vkus-sovet.ru/api/getSubMenu.php?menuID=29")!)) {data,response,error in
+                    print(data)
+                    print(response)
+                }
+                task.resume()
+            }
     }
 }
 
