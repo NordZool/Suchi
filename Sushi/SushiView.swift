@@ -67,7 +67,7 @@ struct SushiView: View {
 }
 
 #Preview {
-    SushiView(menuItem: .init(id: "2", image: "/upload/iblock/368/zx0dxzelbg3vxohbdmuorr107kt3tna6.jpg", name: "Магура", content: "sublabel", price: "100", weight: "50 г", spicy: "Y")) {
+    SushiView(menuItem: .init(id: "2", imageLink: "/upload/iblock/368/zx0dxzelbg3vxohbdmuorr107kt3tna6.jpg", name: "Магура", content: "sublabel", price: "100", weight: "50 г", spicy: true)) {
         //
     }
     
