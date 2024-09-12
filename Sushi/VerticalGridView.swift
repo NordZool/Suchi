@@ -17,6 +17,7 @@ Icon : View
     private let colums: [GridItem]
     private let content: () -> Content
     private let spacing: CGFloat
+    private let horizontalPadding: CGFloat
     private let label: Label<Title, Icon>
     init(
         colums: [GridItem] = [
@@ -24,10 +25,12 @@ Icon : View
             GridItem(.flexible(minimum: 50), spacing: 15, alignment: .center)],
         label: Label<Title, Icon>,
         spacing:CGFloat = 20,
+        horizontalPadding: CGFloat = 15,
         @ViewBuilder content: @escaping ()->Content) {
             self.colums = colums
             self.content = content
             self.spacing = spacing
+            self.horizontalPadding = horizontalPadding
             self.label = label
         }
     
@@ -39,6 +42,7 @@ Icon : View
                 spacing: spacing) {
                     content()
                 }
+                .padding(.horizontal, horizontalPadding)
         }
     }
 }
@@ -46,7 +50,7 @@ Icon : View
 #Preview {
     VerticalGridView(label: .init("Test", systemImage: "pen")) {
         ForEach(["Test", "Testing","some"], id: \.self) {item in
-            SushiView(menuItem: .init(id: "2", image: "/upload/iblock/368/zx0dxzelbg3vxohbdmuorr107kt3tna6.jpg", name: "Label", content: "sublabel", price: "100", weight: "50 г", spicy: "Y")) {
+            SushiView(menuItem: .init(id: "2", image: "/upload/iblock/368/zx0dxzelbg3vxohbdmuorr107kt3tna6.jpg", name: "Магура спайси", content: "sublabel", price: "12200", weight: "50 г", spicy: "Y")) {
                 //
             }
             SushiView(menuItem: .init(id: "2", image: "/upload/iblock/368/zx0dxzelbg3vxohbdmuorr107kt3tna6.jpg", name: "Label", content: "sublabel", price: "100", weight: "50 г", spicy: "Y")) {
@@ -54,7 +58,7 @@ Icon : View
             }
         }
     }
-    .padding(.horizontal, 15)
+    
     .background(Color(.systemGray))
     
 }
