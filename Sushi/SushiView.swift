@@ -72,9 +72,9 @@ struct SushiView: View {
                     }
                     
                     
-                    Image("Image")
+                    Image(.image)
                         .resizable()
-                        .aspectRatio(contentMode: .fit)
+                        .aspectRatio(contentMode: .fill)
                 }
             }
             .background(.black)
@@ -83,16 +83,16 @@ struct SushiView: View {
             
             Button(action: cartButtonAction) {
                 Text("В корзину")
-                    
+                    .foregroundStyle(.white)
             }
-            .foregroundStyle(.white)
             .frame(maxWidth: .infinity, maxHeight: cartButtonHeight)
             .background(
                 RoundedRectangle(cornerRadius: 10)
                     .fill(.darkerBlue)
+                    
             )
             .padding(.horizontal, 15)
-            .buttonStyle(PlainButtonStyle())
+            .buttonStyle(BorderedButtonStyle())
             
         }
     }
