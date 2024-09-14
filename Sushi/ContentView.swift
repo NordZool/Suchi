@@ -14,7 +14,7 @@ struct ContentView: View {
                 SushiView(menuItem: .init(id: "2", imageLink: "/upload/iblock/368/zx0dxzelbg3vxohbdmuorr107kt3tna6.jpg", name: "Магура спайси", content: "sublabelsublabelsublabelsublabelsublabelsublabelsublabelsublabelsublabelsublabelsublabelsublabelsublabelsublabelsublabelsublabelsublabelsublabelsublabelsublabelsublabelsublabelsublabelsublabelsublabelsublabelsublabelsublabelsublabelsublabelsublabelsublabel", price: "1200", weight: "5000 г", spicy: true)) {
                     //
                 }
-                SushiView(menuItem: .init(id: "2", imageLink: "/upload/iblock/368/zx0dxzelbg3vxohbdmuorr107kt3tna6.jpg", name: "Label", content: "sublabel", price: "100", weight: "50 г", spicy: true)) {
+                SushiView(menuItem: .init(id: "2", imageLink: "/upload/iblock/368/zx0dxzelbg3vxohbdmuorr107kt3tna6.jpg", name: "Label", content: "Тунец", price: "100", weight: "50 г", spicy: true)) {
                     //
                 }
             }

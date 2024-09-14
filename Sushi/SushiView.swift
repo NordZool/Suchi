@@ -10,6 +10,7 @@ import SwiftUI
 struct SushiView: View {
     private let cartButtonAction: () -> Void
     private let menuItem: MenuItem
+    private let cartButtonHeight: CGFloat = 45
     
     init(
         menuItem: MenuItem,
@@ -19,7 +20,7 @@ struct SushiView: View {
         }
     
     var body: some View {
-        ZStack {
+        ZStack(alignment: .bottom) {
             VStack(spacing: 1) {
                 VStack(spacing: 5) {
                     Text(menuItem.name)
@@ -34,7 +35,8 @@ struct SushiView: View {
                         .lineLimit(nil)
                         .multilineTextAlignment(.center)
                         .minimumScaleFactor(0.8)
-                        .font(.footnote)
+                        .font(.system(size: 10))
+                        .fontWeight(.medium)
                         .foregroundStyle(.gray)
                         .frame(maxHeight: 60, alignment: .top)
                         .padding(.horizontal, 10)
@@ -77,6 +79,21 @@ struct SushiView: View {
             }
             .background(.black)
             .clipShape(RoundedRectangle(cornerRadius: 10))
+            .padding(.bottom, cartButtonHeight / 2)
+            
+            Button(action: cartButtonAction) {
+                Text("В корзину")
+                    
+            }
+            .foregroundStyle(.white)
+            .frame(maxWidth: .infinity, maxHeight: cartButtonHeight)
+            .background(
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(.darkerBlue)
+            )
+            .padding(.horizontal, 15)
+            .buttonStyle(PlainButtonStyle())
+            
         }
     }
 }
