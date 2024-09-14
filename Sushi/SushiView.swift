@@ -40,29 +40,44 @@ struct SushiView: View {
                         .padding(.horizontal, 10)
                 }
                 VStack(spacing: 5) {
-                    HStack {
-                        Text("\(menuItem.price) ₽")
-                            .foregroundStyle(.white)
-                            .fontWeight(.medium)
-                            .font(.title3)
-                        Text("/ \(menuItem.weight)")
-                            .foregroundStyle(.gray)
-                            .fontWeight(.bold)
-                            .font(.footnote)
+                    ZStack {
+                        HStack(spacing:4) {
+                            Text("\(menuItem.price) ₽")
+                                .foregroundStyle(.white)
+                                .fontWeight(.medium)
+                                .font(.title3)
+                                Rectangle()
+                                    .frame(width: 1, height: 10)
+                                    .foregroundStyle(.gray)
+                                    .rotationEffect(.degrees(15))
+                                Text(menuItem.weight)
+                                    .foregroundStyle(.gray)
+                                    .fontWeight(.bold)
+                                    .font(.footnote)
+                            
+                        }
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.7)
+                        .padding(.horizontal,30)
+                        
+                        HStack {
+                            Spacer()
+                            Image("chiliPiper")
+                                .resizable()
+                                .frame(width: 20, height: 25)
+                        }
+                        .padding(.trailing, 5)
                     }
-                    .padding(.horizontal,10)
+                    
                     
                     Image("Image")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                 }
-                
             }
             .background(.black)
             .clipShape(RoundedRectangle(cornerRadius: 10))
-            
         }
-        
     }
 }
 
