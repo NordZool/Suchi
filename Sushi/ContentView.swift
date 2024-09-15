@@ -9,13 +9,30 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        VerticalGridView(label: Label(
+            title: {
+                Text("Суши")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundStyle(.white)
+            },
+            icon: {}
+        )) {
+            ForEach(MenuItem.testItems) {item in
+                SushiView(menuItem: item) {
+                    //action
+                }
+            }
         }
-        .padding()
+        .background(.gray)
+//            .onAppear {
+//                print("Test")
+//                let task = URLSession.shared.dataTask(with: .init(url: .init(string: "https://vkus-sovet.ru/api/getSubMenu.php?menuID=29")!)) {data,response,error in
+//                    print(data)
+//                    print(response)
+//                }
+//                task.resume()
+//            }
     }
 }
 
