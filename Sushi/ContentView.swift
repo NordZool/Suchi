@@ -8,22 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var vtest = 10
     var body: some View {
-        VerticalGridView(label: Label(
-            title: {
-                Text("Суши")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .foregroundStyle(.white)
-            },
-            icon: {}
-        )) {
-            ForEach(MenuItem.testItems) {item in
-                SushiView(menuItem: item) {
-                    //action
-                }
-            }
-        }
+        TabViewItemView(selectedMenuID: $vtest, menu: .init(menuID: 8, imageLink: "", name: "Tester", subMenuCount: 40))
         .background(.gray)
 //            .onAppear {
 //                print("Test")
