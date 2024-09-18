@@ -96,6 +96,30 @@ extension MenuItem {
             price: "1 000",
             weight: "100 г",
             spicy: false),
+        .init(
+            id: "3",
+            imageLink: "/upload/iblock/368/zx0dxzelbg3vxohbdmuorr107kt3tna6.jpg",
+            name: "Магура спайси",
+            content: "Тунец",
+            price: "320",
+            weight: "50 г",
+            spicy: true),
+        .init(
+            id: "4",
+            imageLink: "/upload/iblock/b9d/pvbuhueov2vhi3jvplw2fq57i5u88u5f.jpg",
+            name: "Хит",
+            content: "Эби Яки, Сяке кунсей, Тайланд, Унаги яки",
+            price: "1 300",
+            weight: "1200 г",
+            spicy: false),
+        .init(
+            id: "5",
+            imageLink: "/upload/iblock/b9d/pvbuhueov2vhi3jvplw2fq57i5u88u5f.jpg",
+            name: "Сашими",
+            content: "Эби Яки Тайланд, Унаги яки",
+            price: "1 000",
+            weight: "100 г",
+            spicy: false),
     ]
 }
 #endif

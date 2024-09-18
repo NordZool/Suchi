@@ -37,7 +37,6 @@ Icon : View
         }
     
     public var body: some View {
-        ScrollView {
             LazyVStack(alignment:.leading) {
                 label
                     .padding(.bottom, 15)
@@ -51,7 +50,6 @@ Icon : View
                     }
             }
             .padding(.horizontal, horizontalPadding)
-        }
     }
 }
 
@@ -66,7 +64,7 @@ Icon : View
         icon: {}
     )) {
         ForEach(MenuItem.testItems) {item in
-            SushiView(menuItem: item) {
+            MenuItemView(menuItem: item) {
                 //action
             }
         }

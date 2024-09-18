@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SushiView: View {
+struct MenuItemView: View {
     private let cartButtonAction: () -> Void
     private let menuItem: MenuItem
     private let cartButtonHeight: CGFloat = 45
@@ -99,7 +99,7 @@ struct SushiView: View {
 }
 
 #Preview {
-    SushiView(menuItem: .init(id: "2", imageLink: "/upload/iblock/368/zx0dxzelbg3vxohbdmuorr107kt3tna6.jpg", name: "Магура", content: "sublabel", price: "100", weight: "50 г", spicy: true)) {
+    MenuItemView(menuItem: .init(id: "2", imageLink: "/upload/iblock/368/zx0dxzelbg3vxohbdmuorr107kt3tna6.jpg", name: "Магура", content: "sublabel", price: "100", weight: "50 г", spicy: true)) {
         //
     }
     

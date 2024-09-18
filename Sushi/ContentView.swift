@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var vtest = 10
     var body: some View {
-        TabViewItemView(selectedMenuID: $vtest, menu: .init(menuID: 8, imageLink: "", name: "Tester", subMenuCount: 40))
+        MenuTabView()
         .background(.gray)
 //            .onAppear {
 //                print("Test")

@@ -9,5 +9,5 @@ import Foundation
 
 
 class MenuViewModel: ObservableObject {
-    @Published var menuList: [Menu] = []
+    @Published var menuList: [Menu] = Menu.data
 }

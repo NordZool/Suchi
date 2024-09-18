@@ -48,3 +48,13 @@ extension Menu : Codable {
         try container.encode(String(subMenuCount), forKey: .subMenuCount)
     }
 }
+
+//MARK: - Testable data
+#if DEBUG
+extension Menu {
+    static let data: [Menu] = [
+        .init(menuID: 0, imageLink: "Test", name: "Sushi", subMenuCount: 10),
+        .init(menuID: 1, imageLink: "Test", name: "omar", subMenuCount: 56),
+    ]
+}
+#endif
