@@ -17,13 +17,24 @@ class AlamofireMenuService {
     private let URLPostfix: String = ".php"
     
     //MARK: - Inits
-    private init() {getMenus()}
+    private init() {}
     
     //MARK: - Public methods
-    func getMenus() {
-        let urlTest = configureURL(basicURL, with: ["getMenu"], postfix: URLPostfix)
-        
-        let test = AF.request(URL(string:"")!)
+    func getMenuList(
+        with components: [String] = ["getMenu"],
+        complition: @escaping (Result<[Menu],AFError>) -> Void) {
+        let url = configureURL(basicURL, with: components, postfix: URLPostfix)
+            
+            AF.request(url).responseDecodable(of: GetMenuListResponse.self) { response in
+                let result = response.result
+                switch result {
+                case .success(let success):
+                    let menuList = success.menuList
+                    complition(.success(menuList))
+                case .failure(let failure):
+                    complition(.failure(failure))
+                }
+        }
     }
     
     private func configureURL<S: Sequence>(
@@ -44,5 +55,10 @@ class AlamofireMenuService {
         url += postfix ?? ""
         
         return URL(string: url)!
+    }
+    
+    fileprivate struct GetMenuListResponse : Decodable {
+        let status: Bool
+        let menuList: [Menu]
     }
 }

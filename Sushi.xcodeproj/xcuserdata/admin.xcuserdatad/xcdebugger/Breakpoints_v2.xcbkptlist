@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "421DB601-6A55-49F2-992C-900B5B05D15D"
+            uuid = "88F93E3A-9432-40C3-BD51-AC034B4A0EA1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sushi/Services/AlamofireMenuService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "getMenus()"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "getMenuList(with:complition:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -34,9 +34,7 @@ extension Menu : Codable {
         self.menuID = Int(menuID) ?? 0
         self.imageLink = try container.decode(String.self, forKey: .imageLink)
         self.name = try container.decode(String.self, forKey: .name)
-        
-        let subMenuCount = try container.decode(String.self, forKey: .subMenuCount)
-        self.subMenuCount = Int(subMenuCount) ?? 0
+        self.subMenuCount = try container.decode(Int.self, forKey: .subMenuCount)
     }
     
     func encode(to encoder: any Encoder) throws {
@@ -45,7 +43,7 @@ extension Menu : Codable {
         try container.encode(String(menuID), forKey: .menuID)
         try container.encode(imageLink, forKey: .imageLink)
         try container.encode(name, forKey: .name)
-        try container.encode(String(subMenuCount), forKey: .subMenuCount)
+        try container.encode(subMenuCount, forKey: .subMenuCount)
     }
 }
 
