@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8412B0D22C9EB34C00BD80CB /* AlamofireMenuService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412B0D12C9EB34C00BD80CB /* AlamofireMenuService.swift */; };
 		844E687A2C8F27A40079902B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 844E68792C8F27A40079902B /* Alamofire */; };
 		8496CC1D2C8F09080089A313 /* SushiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8496CC1C2C8F09080089A313 /* SushiApp.swift */; };
 		8496CC1F2C8F09080089A313 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8496CC1E2C8F09080089A313 /* ContentView.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8412B0D12C9EB34C00BD80CB /* AlamofireMenuService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireMenuService.swift; sourceTree = "<group>"; };
 		8496CC192C8F09080089A313 /* Sushi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sushi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8496CC1C2C8F09080089A313 /* SushiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SushiApp.swift; sourceTree = "<group>"; };
 		8496CC1E2C8F09080089A313 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +56,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8412B0D02C9EB33D00BD80CB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8412B0D12C9EB34C00BD80CB /* AlamofireMenuService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		844E68782C8F27A40079902B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +93,7 @@
 			children = (
 				8496CC1C2C8F09080089A313 /* SushiApp.swift */,
 				8496CC1E2C8F09080089A313 /* ContentView.swift */,
+				8412B0D02C9EB33D00BD80CB /* Services */,
 				84D9FD272C9B13B100F6AFCD /* MenuTabView */,
 				84D9FD262C9B125A00F6AFCD /* MenuItemsGrid */,
 				84FCC93E2C9865F20041F5C2 /* GridViews */,
@@ -233,6 +244,7 @@
 				8496CC1D2C8F09080089A313 /* SushiApp.swift in Sources */,
 				84FCC93D2C9865CF0041F5C2 /* HorizontalScrollableTabBar.swift in Sources */,
 				84FCC9452C986A8A0041F5C2 /* TabViewItemView.swift in Sources */,
+				8412B0D22C9EB34C00BD80CB /* AlamofireMenuService.swift in Sources */,
 				84E16CD02C908E87003926F4 /* MenuItem.swift in Sources */,
 				84E16CCC2C907D94003926F4 /* VerticalGridView.swift in Sources */,
 			);
